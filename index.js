@@ -40,7 +40,24 @@ function Airplane(name) {
   */
   
  function Person(name, age) {
-    
+    this.name = name;
+    this.age = age;
+    this.stomach = [];
+    this.eat = function(food) {
+      if(this.stomach.length > 10) {
+        return
+      }
+      else {
+        this.stomach.push(food)
+      }
+    }
+    this.poop = function() {
+     this.stomach.length = 0; 
+    }
+    this.toString = function() {
+      return `${this.name}, ${this.age}`
+    }
+
   }
  
  
